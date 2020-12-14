@@ -14,7 +14,12 @@ for(var i=0; i<word.length;i++){
 //create a variable to hold the number of remaining letter to be quessed
 var remainingLetters = word.length;
 
+
+
 var incorrectGuesses = 6;
+
+alert(word);
+
 
 //main game loop
 
@@ -42,6 +47,10 @@ while(remainingLetters && incorrectGuesses>0) {
                 answerArray[j] = guess;
                 //subtract one from remaining letters
                 remainingLetters--;
+                incorrectGuesses--;
+                //alert player remaining guesses
+                alert("Remaining guesses: " + incorrectGuesses);
+
            }
         }
     }
@@ -50,6 +59,8 @@ while(remainingLetters && incorrectGuesses>0) {
         }
 //letter player know the word
         alert(answerArray.join(" "));
+
+
 
 //Congrats the player
         alert(" Good job! The answer was " + word);
